@@ -9,7 +9,7 @@ https://ajay14312.github.io/index.html
 - username: matt;password: matt
 - username: alex;password: alex
 
-You can sign up also.
+###### You can sign up also.
 
 Tech stack used: Angular, HTML, CSS, Typescript, firebase.
 
