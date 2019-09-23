@@ -21,8 +21,8 @@
     <p *ngIf="isUserCorrect" class="login-span duplicate-username">Please enter correct username/password</p>
     <p *ngIf="isUserNameExist" class="login-span duplicate-username">Dupliacte user name</p>
     <section class="login-section login-input">
-      <input type="text" placeholder="User name" [(ngModel)]="signUpUserName" />
-      <input type="password" placeholder="Password" [(ngModel)]="signUpPWD" />
+      <input type="text" placeholder="User name" [(ngModel)]="signUpUserName" autocomplete="off"/>
+      <input type="password" placeholder="Password" [(ngModel)]="signUpPWD" autocomplete="off"/>
       <div>
         <span class="avatar-span">Select your avatar:</span>
         <select class="avatar-select" [(ngModel)]="selectedAvatar">
