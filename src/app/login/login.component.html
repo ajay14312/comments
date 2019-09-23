@@ -1,0 +1,38 @@
+<div class="login-container">
+  <header class="login-header">
+    <h2 class="login-header-text">
+      <span (click)="selectLoginOrSignUp(0)">Login</span>
+      /
+      <span (click)="selectLoginOrSignUp(1)">Sign Up</span>
+    </h2>
+    <div class="login-line"></div>
+  </header>
+  <ng-container *ngIf="isLogin; else signUp">
+    <span class="login-span">Login to comments page/ Enter as anonymus user</span>
+    <p *ngIf="isUserCorrect" class="login-span duplicate-username">Please enter correct username/password</p>
+    <section class="login-section login-input">
+      <input type="text" placeholder="User name" [(ngModel)]="userName" />
+      <input type="password" placeholder="password" [(ngModel)]="pwd" />
+      <button class="login-btn" (click)="login()"><i class="fa fa-sign-in icon-padding" aria-hidden="true"></i>CONTINUE</button>
+    </section>
+  </ng-container>
+  <ng-template #signUp>
+    <span class="login-span">SignUp to comments page/ Enter as anonymus user</span>
+    <p *ngIf="isUserCorrect" class="login-span duplicate-username">Please enter correct username/password</p>
+    <p *ngIf="isUserNameExist" class="login-span duplicate-username">Dupliacte user name</p>
+    <section class="login-section login-input">
+      <input type="text" placeholder="User name" [(ngModel)]="signUpUserName" />
+      <input type="password" placeholder="Password" [(ngModel)]="signUpPWD" />
+      <div>
+        <span class="avatar-span">Select your avatar:</span>
+        <select class="avatar-select" [(ngModel)]="selectedAvatar">
+          <option value="male.png">Gent image</option>
+          <option value="female.png">Lady image</option>
+          <option value="guitarist.png">Guitarist</option>
+        </select>
+      </div>
+      <button class="login-btn" (click)="signUP()"><i class="fa fa-user-plus icon-padding" aria-hidden="true"></i>Sign Up</button>
+    </section>
+  </ng-template>
+
+</div>

@@ -1,0 +1,42 @@
+<app-spinner *ngIf="showSpinner"></app-spinner>
+<div class="comment-container">
+  <section class="comment-section" *ngFor="let item of tasks | async;let i =index">
+    <div class="img-div">
+      <img class="img-width-height" src="../../assets/{{item.image}}">
+    </div>
+    <div class="comment-content">
+      <span class="name">{{item.name}}</span>
+      <span class="comment-time">{{item.date | showTime}}</span>
+      <p>{{item.comment}}</p>
+      <span class="reply"
+      (click)="openReplyBox(item.key, i)"
+      *ngIf="userName.toLowerCase() !== item.name.toLowerCase()">Reply</span>
+    </div>
+    <div class="child-section comment-time" *ngIf="item.childrenComments && item.childrenComments.length > 0">
+      <span class="replies-pointer" *ngIf="selectedReplies != i" (click)="viewAllReplies(i)">View
+        {{item.childrenComments.length}}
+        replies</span>
+      <span class="replies-pointer" *ngIf="selectedReplies === i" (click)="viewAllReplies(-1)">hide
+        {{item.childrenComments.length}}
+        replies</span>
+    </div>
+    <ng-container *ngIf="selectedReplies === i">
+      <app-child-comment
+        [childItem]="{childItem: childItem, selectedParentCommentID: item.key, slectedChildCommentID: j, selectedParentID: i}"
+        class="child-section" *ngFor="let childItem of item.childrenComments;let j =index"
+        (passChildCommentData)="openChildReplyBox($event)" [ngClass]="selectedReplies === i? 'fade-in': 'fade-out'">
+      </app-child-comment>
+    </ng-container>
+  </section>
+  <div>
+    <div class="comment-textarea-div">
+      <textarea class="comment-textarea" [(ngModel)]="replyContent" #textArea></textarea>
+    </div>
+    <p class="reply-hint" *ngIf="isReplyContentExist">Please add content to post the comment</p>
+    <button (click)="cancelReply()" class="cancel-btn">Cancel</button>
+    <button (click)="replyComment()" class="cancel-btn">
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      Add Reply
+    </button>
+  </div>
+</div>

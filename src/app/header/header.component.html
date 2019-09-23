@@ -1,0 +1,16 @@
+<section class="section-logout">
+    <div class="header-div">
+      <h2 (click)="routeToComments()">
+        Comments-app
+      </h2>
+    </div>
+    <div (click)="logout()" class="logout-div" *ngIf="!hideLogout">
+      <p class="username-margin" *ngIf="userName">
+        {{userName}}
+      </p>
+      <i class="fa fa-sign-out icon-padding" aria-hidden="true"></i>Logout
+    </div>
+    <div (click)="login()" class="logout-div" *ngIf="hideLogout && isAtLoginPage">
+        Login
+      </div>
+  </section>

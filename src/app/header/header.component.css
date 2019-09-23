@@ -1,0 +1,26 @@
+.section-logout{
+    height: 60px;
+    background-image: linear-gradient(174deg, rgba(255, 0, 165, 0.5), #a4a4f3);
+    align-items: center;
+    display: flex;
+    color: #fff;
+    font-size: 15px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.header-div {
+    padding: 0 0 0 10px;
+    cursor: pointer;
+}
+.logout-div{
+    padding: 0 10px 0;
+    cursor: pointer;
+}
+.username-margin {
+    margin-bottom: 5px;
+}
+.icon-padding {
+    padding-right: 5px; 
+}

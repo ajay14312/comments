@@ -1,0 +1,18 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+.half-circle {
+    left: 94vw;
+    position: absolute;
+    top: 40%;
+    height: 100px;
+    width: 100px;
+    background-color: deepskyblue;
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 150px;
+    height: 150px;
+    width: 75px;
+}

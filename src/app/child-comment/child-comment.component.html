@@ -1,0 +1,10 @@
+<div class="img-div">
+  <img class="img-width-height" src="../../assets/{{childItem.childItem.image}}">
+</div>
+<div class="comment-content">
+  <span class="name">{{childItem.childItem.name}}</span>
+  <span class="comment-time">{{childItem.childItem.date | showTime}}</span>
+  <p>{{childItem.childItem.comment}}</p>
+  <span class="reply" (click)="openChildReplyBox()"
+    *ngIf="userName !== childItem.childItem.name.toLowerCase()">Reply</span>
+</div>
