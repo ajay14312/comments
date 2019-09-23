@@ -4,10 +4,10 @@
 https://ajay14312.github.io/index.html
 
 ###### login details:
--username: ajay;password: kumar
--username: kumar;password: ajay
--username: matt;password: matt
--username: alex;password: alex
+- username: ajay;password: kumar
+- username: kumar;password: ajay
+- username: matt;password: matt
+- username: alex;password: alex
 
 You can sign up also.
 
