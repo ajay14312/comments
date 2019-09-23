@@ -1,6 +1,6 @@
 # comments-app
 
-# Use below link to play with the live application
+## Use below link to play with the live application
 https://ajay14312.github.io/index.html
 
 login details:
@@ -13,7 +13,7 @@ You can sign up also.
 
 Tech stack used: Angular, HTML, CSS, Typescript, firebase.
 
-# Run in Local
+## Run in Local
 
 To run the application in local follow below steps:
   1. clone the project from URL
