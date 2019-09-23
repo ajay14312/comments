@@ -16,7 +16,7 @@ Tech stack used: Angular, HTML, CSS, Typescript, firebase.
 ## Run in Local
 
 ###### To run the application in local follow below steps:
-1. clone the project from URL
+1. clone the project from URL(https://github.com/ajay14312/comments.git)
 2. install node modules using 'npm install' command
 3. run the application using 'ng serve' command
 4. open localhost:4200 in browser
